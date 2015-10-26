@@ -60,7 +60,8 @@ public class SnakeFrame extends JFrame
         if (key == 32) {
             if (panel.isDead()) {
                 panel.init(this);
-            } else {
+            }
+            else {
                 panel.togglePause();
             }
         }
@@ -68,15 +69,18 @@ public class SnakeFrame extends JFrame
             return;
         }
         int xDirection = panel.getXDirection(),
-                yDirection = panel.getYDirection();
+            yDirection = panel.getYDirection();
 
         if (xDirection != 1 && key == 37) {
             panel.setXDirection(-1);
-        } else if (xDirection != -1 && key == 39) {
+        }
+        else if (xDirection != -1 && key == 39) {
             panel.setXDirection(1);
-        } else if (yDirection != 1 && key == 38) {
+        }
+        else if (yDirection != 1 && key == 38) {
             panel.setYDirection(-1);
-        } else if (yDirection != -1 && key == 40) {
+        }
+        else if (yDirection != -1 && key == 40) {
             panel.setYDirection(1);
         }
     }
